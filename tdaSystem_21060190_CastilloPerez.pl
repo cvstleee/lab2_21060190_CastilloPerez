@@ -26,3 +26,22 @@ getUserActual(System,UserActual):-
 
 
 
+%probablemente tenga que cambiarla a la que he estado usando comunmente debido a como puse el ejemplo, ya que se irán agregando
+%uno a uno.
+%quizá no sea necesario, pq aqui la lista siempre será con más usuarios, no con otros elementos como era en el caso del flow y option   
+
+filtroDuplicadosUser([],[]):-
+    !.
+
+filtroDuplicadosUser([H | T],[H | ListaNueva]):-
+    filtroDuplicadosUser(T, ListaNueva),
+    \+ member(H,ListaNueva).
+
+filtroDuplicadosUser([_ | T],ListaNueva):-
+    filtroDuplicadosUser(T, ListaNueva).
+
+
+setSystemUserActual(System, UserActual, SystemNuevo):-
+    tdaSystem(Fecha, Name, InitialChatbotCodeLink, Chatbots,Users,_,System),
+    tdaSystem(Fecha, Name, InitialChatbotCodeLink, Chatbots,Users,UserActual,SystemNuevo).
+
