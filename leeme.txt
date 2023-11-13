@@ -1,0 +1,10 @@
+En el archivo .zip se encontrarán todos los archivos .pl. Para poder hacer uso de ellos se debe
+abrir la consola de prolog y hacer un consult con el nombre completo del archivo main, después
+hacer uso de lo siguiente set_prolog_flag(answer_write_options,[max_depth(0)]), que
+prácticamente hace que la consola muestre las listas completas, cuando esto dé “true”, se
+ponen las consultas que se encontrarán en el archivo “pruebas”, se encontrarán comentadas las
+que no se alcanzaron a implementar y las que dan false, esto para evitar errores al momento de
+ejecutar el programa. Se dejará un ejemplo en el anexo 2.
+
+También Prolog suele caerse cuando llega al límite de la memoria, solo habría que reiniciarlo.
+
